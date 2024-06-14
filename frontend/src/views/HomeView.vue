@@ -22,9 +22,7 @@
       <ProvideInjectChild></ProvideInjectChild>
     <!-- <FooterTitle>카피라이트</FooterTitle> -->
      <PagingComponent v-bind="page" @go-page="goPage"></PagingComponent>
-     <hr>
-     count : {{ count }}
-     <button @click="increment">store count 증가</button>
+    
   </div>
 </template>
 
@@ -41,6 +39,7 @@ import ChildComponent4 from '@/components/ChildComponent4.vue'
 import SlotModalLayout from '@/components/SlotModalLayout.vue'
 import ProvideInjectChild from '@/components/ProvideInjectChild.vue'
 import PagingComponent from '@/components/PagingComponent.vue'
+// import LoginForm from '@/components/LoginForm.vue'
 
 export default {
   name: 'HomeView',

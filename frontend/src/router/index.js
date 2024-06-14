@@ -17,6 +17,14 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
+    path: '/loginForm',
+    name: 'loginForm',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "loginForm" */ '../views/LoginForm.vue')
+  },
+  {
     path: '/customer',
     name: 'customer',
     // route level code-splitting
@@ -31,6 +39,22 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "customerInsert" */ '../views/CustomerInsertView.vue')
+  },
+  {
+    path: '/board',
+    name: 'board',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "board" */ '../views/BoardView.vue')
+  },
+  {
+    path: '/boardGet',
+    name: 'boardGet',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "board" */ '../views/BoardInfoView.vue')
   }
 ]
 
