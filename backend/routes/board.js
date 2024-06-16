@@ -46,23 +46,30 @@ router.get('/:no', (req,res) => {
     // res.send(result);
 })
 
-const multer = require('multer');
-const upload = multer({ dest: 'D:/upload/' })
-router.post('/',upload.single("file") ,(req,res) => {
-    // 첨부파일이 있으면
-    //////
-    let data = { ...req.body};
-    if(req.file.filesize != null) {
-        data.filename = req.file.filename;
-        data.uploadfilename = req.file.uploadfilename;
-    }
-    //////
-    console.log(req.body)
+router.post('/', (req,res) => {
     query("boardInsert", req.body)
         .then(result => res.send(result))
-    // board.push(req.body);
-    // res.send('boardInsert 라우트')
-})
+        board.push(req.body);
+        // res.send()
+}) 
+
+// const multer = require('multer');
+// const upload = multer({ dest: 'D:/upload/' })
+// router.post('/',upload.single("file") ,(req,res) => {
+//     // 첨부파일이 있으면
+//     //////
+//     let data = { ...req.body};
+//     if(req.file.filesize != null) {
+//         data.filename = req.file.filename;
+//         data.uploadfilename = req.file.uploadfilename;
+//     }
+//     //////
+//     console.log(req.body)
+//     query("boardInsert", req.body)
+//         .then(result => res.send(result))
+//     // board.push(req.body);
+//     // res.send('boardInsert 라우트')
+// })
 router.put('/:no', async (req,res) => {
     const no = req.params.no;
 

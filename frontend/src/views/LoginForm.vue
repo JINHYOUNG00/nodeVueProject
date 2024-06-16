@@ -12,8 +12,8 @@
 
 <script>
 import axios from "axios";
-export default { 
-    data() { 
+export default {
+    data() {
         return {
             form: {
                 userid: '',
@@ -21,8 +21,8 @@ export default {
             },
         }
     },
-    computed : {
-        account(){
+    computed: {
+        account() {
             return this.$store.state.user.userid;
         }
     },
@@ -38,27 +38,26 @@ export default {
     //         });
     // },
     methods: {
-        loginHandler(){
+        loginHandler() {
             axios.post('/api/login', this.form)
                 .then((result) => {
                     alert('로그인 성공')
                     this.$store.commit('user', result.data);
-        })                
-                 .catch((err) => {
+                })
+                .catch((err) => {
                     console.log(err)
                     alert('로그인실패')
-        })
+                })
         },
-        logoutHandler(){
+        logoutHandler() {
             axios.post('/api/logout')
                 .then(() => {
                     alert('로그아웃');
                     this.$store.commit('user', {});
                 })
-        }       
+        }
     }
 }
 </script>
 
-<style>
-</style>
+<style></style>

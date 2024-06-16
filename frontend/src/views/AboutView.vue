@@ -11,39 +11,38 @@
 <script>
 import PageTitle from '../components/PageTitle.vue'
 export default {
-  components :{
+  components: {
     PageTitle
   },
-  data() { 
+  data() {
     return {
-      form:{title : ''},
+      form: { title: '' },
       file: ''
     }
   },
   created() {
-    
-  },
-  methods:  {
-	submitForm(){
-            let formData = new FormData();
-            formData.append('file', this.file);
-	          formData.append('title', this.board.title);
-            this.axios.post('http://localhost:8000/api/board',  formData,
-                { headers: { 'Content-Type': 'multipart/form-data' }   }
-            ).then(function(data){
-              console.log(data.data);
-            })
-            .catch(function(){
-              console.log('FAILURE!!');
-            });
-      },     
 
-      onChangeFileUpload(){
-        this.file = this.$refs.file.files[0];
-      }
+  },
+  methods: {
+    submitForm() {
+      let formData = new FormData();
+      formData.append('file', this.file);
+      formData.append('title', this.board.title);
+      this.axios.post('http://localhost:8000/api/board', formData,
+        { headers: { 'Content-Type': 'multipart/form-data' } }
+      ).then(function (data) {
+        console.log(data.data);
+      })
+        .catch(function () {
+          console.log('FAILURE!!');
+        });
+    },
+
+    onChangeFileUpload() {
+      this.file = this.$refs.file.files[0];
     }
+  }
 }
 </script>
 
-<style>
-</style>
+<style></style>

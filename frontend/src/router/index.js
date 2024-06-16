@@ -49,12 +49,20 @@ const routes = [
     component: () => import(/* webpackChunkName: "board" */ '../views/BoardView.vue')
   },
   {
-    path: '/boardGet',
+    path: '/boardGet/:no',
     name: 'boardGet',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "board" */ '../views/BoardInfoView.vue')
+  },
+  {
+    path: '/boardInsert',
+    name: 'boardInsert',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "board" */ '../views/BoardInsertView.vue')
   }
 ]
 
