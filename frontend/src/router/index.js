@@ -54,7 +54,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "board" */ '../views/BoardInfoView.vue')
+    component: () => import(/* webpackChunkName: "boardGet" */ '../views/BoardInfoView.vue')
   },
   {
     path: '/boardInsert',
@@ -62,7 +62,31 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "board" */ '../views/BoardInsertView.vue')
+    component: () => import(/* webpackChunkName: "boardInsert" */ '../views/BoardInsertView.vue')
+  },
+  {
+    path: '/vuetify',
+    name: 'vuetify',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "vuetify" */ '../views/VuetifyView.vue')
+  },
+  {
+    path: '/composition',
+    name: 'composition',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "composition" */ '../components/CompositionDataBinding.vue')
+  },
+  {
+    path: '/compositionMouse',
+    name: 'compositionMouse',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "compositionMouse" */ '../views/CompositionMouseView.vue')
   }
 ]
 

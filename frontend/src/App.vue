@@ -6,9 +6,12 @@
       <router-link to="/customer">Customer</router-link> |
       <router-link to="/customerinsert">CustomerInsert</router-link> |
       <router-link to="/board">Board</router-link> |
+      <router-link to="/vuetify">Vuetify</router-link> |
+      <router-link to="/composition">Compositoin</router-link> |
+      <router-link to="/compositionMouse">CompositoinMouse</router-link> |
       <router-link to="/loginForm">Login</router-link>
     </nav>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 

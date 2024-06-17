@@ -2,7 +2,7 @@ const mysql = require("mysql2");
 const sql = require('./sql.js');
 require('dotenv').config({path:'mysql/.env'});
 
-const conn = {
+const conn = { // mysql 접속 설정
   connectionLimit: process.env.MYSQL_LIMIT,
   host: process.env.MYSQL_HOST,
   port: process.env.MYSQL_PORT,
